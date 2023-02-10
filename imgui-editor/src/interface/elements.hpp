@@ -172,6 +172,8 @@ namespace elements
 			if (layer.type == drawType::Text) return "Text";
 			if (layer.type == drawType::Circle) return "Circle";
 			if (layer.type == drawType::CircleFilled) return "Circle Filled";
+
+			return "Unknown";
 		};
 
 		window->DrawList->AddRectFilled(bb.Min, bb.Max, ImColor(47, 47, 47));
@@ -913,6 +915,8 @@ namespace elements
 			if (layer.type == elementType::COMBO) return "Combo";
 			if (layer.type == elementType::BUTTON) return "Button";
 			if (layer.type == elementType::COLORPICKER) return "ColorPicker";
+			
+			return "Unknown";
 		};
 
 		window->DrawList->AddRectFilled(bb.Min, bb.Max, ImColor(47, 47, 47));

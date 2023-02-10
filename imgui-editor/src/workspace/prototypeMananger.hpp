@@ -16,7 +16,7 @@ public:
 	void Sidebar();
 	void Mainbar();
 
-	widgetPrototype* currentEditor;
+	widgetPrototype* currentEditor = nullptr;
 };
 
 inline auto prototypeManager = std::make_shared<PrototypeManager>();

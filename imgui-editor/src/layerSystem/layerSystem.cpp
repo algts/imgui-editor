@@ -4,6 +4,7 @@
 #include "../../dependencies/imgui/imgui_impl_dx9.h"
 #include "../utils/utils.hpp"
 #include "../../dependencies/security/XorStr.hpp"
+#include "../../dependencies/d3dx9/include/d3dx9tex.h"
 
 void layerSystem::RegisterImage(std::string path) {
     layerStruct baseData;

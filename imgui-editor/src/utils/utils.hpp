@@ -30,10 +30,9 @@ namespace utils {
             if (std::filesystem::path((const char*)data).extension() == ".ttf" ||
                 std::filesystem::path((const char*)data).extension() == ".otf")
             {
-                gLayerSystem->systemFonts.push_back(systemFont{
-                    .name = (std::string)valueName,
-                    .file = (const char*)data,
-                    });
+                systemFont sf = { (std::string)valueName, (const char*)data };
+
+                gLayerSystem->systemFonts.push_back( sf );
             }
             dwIndex++;
         }
@@ -142,7 +141,7 @@ namespace utils {
     }
 
     inline std::string genName(const int len) {
-        srand((unsigned)time(NULL) * _getpid());
+        srand((unsigned)time(NULL) /** _getpid()*/);
         Sleep(1);
 
         static const char alphanum[] =

@@ -46,106 +46,117 @@ struct widgetPrototype {
 
 	void addCursorPos(ImVec2 size)
 	{
-		items.push_back(widgetPrototype{
-			.type = elementType::CURSOR_POS,
-			.name = "SetCursorPos",
-			.cursorPos = size
-			});
+		widgetPrototype w = {};
+		w.type = elementType::CURSOR_POS;
+		w.name = "SetCursorPos";
+		w.cursorPos = size;
+
+		items.push_back( w );
 	}
 
 	void addSameline(float width)
 	{
-		items.push_back(widgetPrototype{
-			.type = elementType::SAMELINE,
-			.name = "SameLine",
-			.fWidth = width,
-			});
+		widgetPrototype w = {};
+		w.type = elementType::SAMELINE;
+		w.name = "SameLine";
+		w.fWidth = width;
+
+		items.push_back( w );
 	}
 
 	void addCheckbox()
 	{
-		items.push_back(widgetPrototype{
-			.type = elementType::CHECKBOX,
-			.name = "Checkbox"
-			});
+		widgetPrototype w = {};
+		w.type = elementType::CHECKBOX;
+		w.name = "Checkbox";
+
+		items.push_back( w );
 	}
 
 	void addSliderInt(int min, int max)
 	{
-		items.push_back(widgetPrototype{
-			.type = elementType::SLIDER_INT,
-			.name = "SliderInt",
-			.iMin = min,
-			.iMax = max
-			});
+		widgetPrototype w = {};
+		w.type = elementType::SLIDER_INT;
+		w.name = "SliderInt";
+		w.iMin = min;
+		w.iMax = max;
+
+		items.push_back( w );
 	}
 
 	void addSliderFloat(float min, float max)
 	{
-		items.push_back(widgetPrototype{
-			.type = elementType::SLIDER_FLOAT,
-			.name = "SliderFloat",
-			.fMin = min,
-			.fMax = max
-		});
+		widgetPrototype w = {};
+		w.type = elementType::SLIDER_FLOAT;
+		w.name = "SliderFloat";
+		w.fMin = min;
+		w.fMax = max;
+
+		items.push_back( w );
 	}
 
 	void addCombo()
 	{
-		items.push_back(widgetPrototype{
-			.type = elementType::COMBO,
-			.name = "Combo"
-		});
+		widgetPrototype w = {};
+		w.type = elementType::COMBO;
+		w.name = "Combo";
+
+		items.push_back( w );
 	}
 
 	void addChild(ImVec2 size)
 	{
-		items.push_back(widgetPrototype{
-			.type = elementType::CHILD,
-			.name = "Child",
-			.childSize = size
-		});
+		widgetPrototype w = {};
+		w.type = elementType::CHILD;
+		w.name = "Child";
+		w.childSize = size;
+
+		items.push_back( w );
 	}
 
 	void addGroup()
 	{
-		items.push_back(widgetPrototype{
-			.type = elementType::GROUP,
-			.name = "Group"
-		});
-	}
+		widgetPrototype w = {};
+		w.type = elementType::GROUP;
+		w.name = "Group";
 
+		items.push_back( w );
+	}
 
 	void addButton()
 	{
-		items.push_back(widgetPrototype{
-			.type = elementType::BUTTON,
-			.name = "Button"
-		});
+		widgetPrototype w = {};
+		w.type = elementType::BUTTON;
+		w.name = "Button";
+
+		items.push_back( w );
 	}
 
 	void addTab()
 	{
-		items.push_back(widgetPrototype{
-			.type = elementType::TAB,
-			.name = "Tab"
-		});
+		widgetPrototype w = {};
+		w.type = elementType::TAB;
+		w.name = "Tab";
+
+		items.push_back( w );
 	}
 
 	void addSubtab()
 	{
-		items.push_back(widgetPrototype{
-			.type = elementType::SUBTAB,
-			.name = "Subtab"
-		});
+		widgetPrototype w = {};
+		w.type = elementType::SUBTAB;
+		w.name = "Subtab";
+
+		items.push_back( w );
 	}
 
 	void addColorpicker()
 	{
-		items.push_back(widgetPrototype{
-			.type = elementType::COLORPICKER,
-			.name = "ColorPicker"
-		});
+		widgetPrototype w = {};
+		w.type = elementType::COLORPICKER;
+		w.name = "ColorPicker";
+
+		items.push_back( w );
 	}
 };
 

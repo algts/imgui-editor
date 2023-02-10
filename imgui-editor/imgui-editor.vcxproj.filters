@@ -212,5 +212,8 @@
     <ClInclude Include="src\interface\transformDrawlist.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="dependencies\d3dx9\d3dx9tex.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

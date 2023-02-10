@@ -14,11 +14,12 @@ void fileSystem::FetchProjects()
 			std::ifstream stream(p.path().string().c_str(), std::ios::binary);
 			nlohmann::json jf = nlohmann::json::parse(stream);
 
-			projects.push_back(projectData{
-				.filename = p.path().string(),
-				.name = jf["Name"].get<std::string>(),
-				.data = jf["Data"].dump(),
-				});
+			projectData pd = {};
+			pd.filename = p.path().string();
+			pd.name = jf["Name"].get<std::string>();
+			pd.data = jf["Data"].dump();
+
+			projects.push_back( pd );
 
 			std::this_thread::sleep_for(std::chrono::milliseconds(10));
 
